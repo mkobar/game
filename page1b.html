@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>TriplePulse.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="page1b_files/bootstrap.css" rel="stylesheet">
+    <link href="page1b_files/bootstrap-responsive.css" rel="stylesheet">
+    <link href="page1b_files/triplepulse.css" rel="stylesheet">
+    <style>
+    </style>    
+    <script type="text/javascript" src="page1b_files/jquery.js"></script>
+    <script type="text/javascript" src="page1b_files/main.js"></script>
+    <script type="text/javascript">
+      function toggleRow(toHide){
+        var toShow = toHide=='first'?'second':'first';
+        toHide = $("#"+toHide+"Row");
+        toShow = $("#"+toShow+"Row");
+        //toHide.fadeOut(1000);
+        toHide.css('display','none');
+        toShow.fadeIn(1000);
+        toShow.css('display','block');
+      }
+    </script>
+
+  </head>
+
+  <body>
+    <div class="container-narrow" id="header">
+
+      <a href="#newsletter">
+       <div class="newsletter">
+          Get our newsletter
+       </div>
+      </a>
+      <div>
+        <div class="logo">
+          <a href="http://23.21.118.215/triplepulse/triplepulse/index.html"><img src="page1b_files/logo.png"></a>
+        </div>
+        <div style="margin-top:-30px;">
+          <ul class="nav nav-pills pull-right">
+            <li>
+              <a href="http://23.21.118.215/triplepulse/triplepulse/page1a.html">Our Stacks</a>
+            </li>
+            <li>
+              <a href="http://23.21.118.215/triplepulse/triplepulse/page2a.html?q=1">Training Tips</a>
+            </li>
+            <li>
+              <a href="http://23.21.118.215/triplepulse/triplepulse/page2a.html?q=2">Results</a>
+            </li>
+            <li>
+              <span style="font-size:30px;margin-left:15px;margin-right:15px;">|</span>
+            </li>
+            <li>
+              <span class="btn btn-warning">
+                <a href="http://23.21.118.215/triplepulse/triplepulse/page1b.html">Sign Up</a>
+              </span>
+            </li>
+            <li>
+              <span class="btn">
+                <a href="#login_form">Login</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="content" class="container-narrow marketing" style="margin-top:100px;">
+      <h1><span class="howItWorks">Stack your pack</span></h1>
+      <br>
+        <div id="progressBar">
+          <div id="tickMark" style="height:50px;">
+          </div>
+          <div id="statusTitle" style="width:100%;margin-left:auto;">
+            <span id="status1" class="btn btn-warning">Type</span>
+            <span id="status2" class="">Level</span>
+            <span id="status3" class="future">Monthly Plans</span>
+            <span id="status4" class="future">Billing</span>
+            <span id="status5" class="future">Account Info</span>
+          </div>
+        </div>
+        <br>
+        <div id="currentQuestion">
+          <span class="howItWorks qusTitle">
+            What are you training for?
+          </span>
+          <br>
+          <div id="qusOptions" style="margin-top:20px;">
+            <span class="span4" onclick="javascript:loadGame(1);">
+              <img src="page1b_files/qus1opt1.png">
+            </span>
+            <span class="span4" onclick="javascript:loadGame(1);">
+              <img src="page1b_files/qus1opt2.png">
+            </span>
+          </div>
+        </div>
+        <br>
+
+    </div>
+
+    <div id="footer" class="container-narrow">
+      <hr style="margin-top:200px;"><!-- Footer -->
+      <div class="container-narrow">
+        <div class="row-fluid">
+          <div class="span8">
+            <div class="span4 logo">
+              <a href="http://23.21.118.215/triplepulse/triplepulse/index.html"><img src="page1b_files/logo.png"></a>
+            </div>
+            <div class="span4" style="margin-left:40px;">
+              <a href="http://23.21.118.215/triplepulse/triplepulse/page1a.html">Our Stacks</a> <br> 
+              <a href="http://23.21.118.215/triplepulse/triplepulse/page2a.html?q=1">Training Tips</a> <br> 
+              <a href="http://23.21.118.215/triplepulse/triplepulse/page2a.html?q=2">Results</a> <br> 
+              <a href="#newsletter">Newsletter</a> <br>
+              <a href="#login_form">Login</a>
+            </div>
+            <div class="span4" style="margin-left:-40px;">
+                Blog <br> Team Mission <br> Faq <br> Terms <br> Privacy
+            </div>
+          </div>
+          <div class="span4" style="text-align:right;">
+            <img src="page1b_files/fb.png">
+            <img src="page1b_files/smart.png">
+            <img src="page1b_files/twitter.png">
+            <img src="page1b_files/pinterest.png">
+            <br><br>
+            <img src="page1b_files/mobilenum.png">
+            <img src="page1b_files/mobile.png">
+          </div>
+        </div>  
+      </div>
+    </div>
+
+    <!-- Modal Pop Ups -->
+        <!-- Newsletter -->
+        <a href="#x" class="overlay" id="newsletter"></a>
+        <div class="popup">
+            <h2>Welcome Guest!</h2>
+            <p>Please enter your email address here</p>
+            <div>
+                <label for="email">Email</label>
+                <input id="" type="text">
+            </div>
+            <input value="Register" type="button">
+
+            <a class="close" href="#close"></a>
+        </div>
+
+        <!-- Login Form -->
+        <a href="#x" class="overlay" id="login_form"></a>
+        <div class="popup">
+            <h2>Welcome Guest!</h2>
+            <p>Please enter your login and password here</p>
+            <div>
+                <label for="login">Login</label>
+                <input id="login" type="text">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input id="password" value="" type="password">
+            </div>
+            <input value="Log In" type="button">
+
+            <a class="close" href="#close"></a>
+        </div>
+    <!-- End of Modal Pop Ups -->
+  
+</body></html>
